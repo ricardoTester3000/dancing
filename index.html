@@ -1,22 +1,35 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neon Brutality</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dancing Between Knives and Bullets PWA</title> <!-- Título do jogo consistente -->
+
+    <!-- Configurações PWA -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/icon-192x192.png"> <!-- Ícone para iOS -->
+    <meta name="theme-color" content="#000000"> <!-- Cor da barra de status (preto para combinar com o tema neon) -->
+
+    <!-- Links de Estilo e Fontes do Jogo -->
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Importmap para Three.js (mantido por compatibilidade com o projeto original) -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"
+            }
+        }
+    </script>
 </head>
 <body>
-  <h1>Neon Brutality Game</h1>
-  <script src="main.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log('Service Worker registrado!'))
-        .catch(err => console.error('Erro ao registrar Service Worker:', err));
-    }
-  </script>
+    <!-- O Canvas onde o jogo será renderizado -->
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- O script principal do seu jogo, que também registra o Service Worker -->
+    <script type="module" src="main.js"></script>
 </body>
 </html>
