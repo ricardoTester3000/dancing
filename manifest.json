@@ -1,0 +1,20 @@
+{
+    "name": "Neon Brutality",
+    "short_name": "NeonGame",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#ff00ff",
+    "icons": [
+        {
+            "src": "assets/bat_icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/glow_stick_icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

@@ -1,0 +1,1 @@
+console.log('Neon Brutality Game iniciado');
