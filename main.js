@@ -1,11 +1,6 @@
 import Game from './game.js';
 
-<script src="utils.js"></script>
-  <script src="player.js"></script>
-  <script src="enemy.js"></script>
-  <script src="level.js"></script>
-  <script src="game.js"></script>
-  <script src="main.js"></script>
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('gameCanvas');
